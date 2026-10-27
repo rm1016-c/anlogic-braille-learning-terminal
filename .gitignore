@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.vvp
+*.vcd
+*.fst
+*.dmp
+test_output/
+.env
+.env.*
+!.env.example
