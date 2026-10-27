@@ -1,0 +1,17 @@
+PASS image: RGB565, grayscale, mean filter, six ROIs, cup sequence, noise, checksum, timeout, abort
+PASS mode3 writing: real UART, hello bytes, strict text, locked cup, correct/wrong, duplicates, exit
+PASS raw UART activity: idle, both edges, latch and reset
+PASS UART: valid and invalid frame filtering
+PASS mode3 audio test: 19 indices, busy rejection, wrap and reset
+PASS mode1 LUT: 47 pinyin keys and reserved cell verified
+PASS matrix scanner: S57/S4 numbering, debounce and hold suppression verified
+PASS mode controller: staged entry, prompts and first correct answer verified
+PASS full mode2 session: 42 staged questions and zero-initial entry verified
+PASS mode2 correction: wrong-only selection and concise full-point correction verified
+PASS stage1 normal: wrong-only feedback, 15 questions and wrap verified
+PASS dynamic wrong set: two real normal errors survive switch and are selected
+PASS stage1 retest: dynamic mix, 8-of-10 threshold and progressive unlock verified
+PASS all-stage retest: short stages produce ten in-range questions
+PASS PCM stream player: accepted=2
+PASS w25q64 reader: 20 bytes and pause control verified
+PASS PCM assembler: endian, backpressure and flush verified

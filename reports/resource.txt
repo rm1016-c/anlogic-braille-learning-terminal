@@ -1,0 +1,122 @@
+standard
+***Report Model: braille_modes_top Device: EG4S20BG256***
+
+IO Statistics
+#IO                        34   out of    188   18.09%
+  #input                   14
+  #output                  10
+  #inout                   10
+
+Utilization Statistics
+#lut                     4991   out of  19600   25.46%
+#reg                     1401   out of  19600    7.15%
+#le                      5027
+  #lut only              3626   out of   5027   72.13%
+  #reg only                36   out of   5027    0.72%
+  #lut&reg               1365   out of   5027   27.15%
+#bram                       0   out of     64    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#dsp                        2   out of     29    6.90%
+#pad                       34   out of    188   18.09%
+  #ireg                     4
+  #oreg                     6
+  #treg                     2
+#pll                        1   out of      4   25.00%
+#gclk                       4   out of     16   25.00%
+#csb                        0   out of      2    0.00%
+
+
+Detailed IO Report
+
+        Name          Direction    Location    IOStandard    IOType    DriveStrength    PullType     PackReg     DiffResistor  
+      aud_bclk          INPUT         M6        LVCMOS33      PAD           N/A          PULLUP       NONE           NONE      
+      aud_lrc           INPUT         M7        LVCMOS33      PAD           N/A          PULLUP       IREG           NONE      
+     flash_miso         INPUT        D14        LVCMOS33      PAD           N/A          PULLUP       IREG           NONE      
+  matrix_row_n[7]       INPUT        P14        LVCMOS33      PAD           N/A          PULLUP       NONE           NONE      
+  matrix_row_n[6]       INPUT        M14        LVCMOS33      PAD           N/A          PULLUP       NONE           NONE      
+  matrix_row_n[5]       INPUT        L13        LVCMOS33      PAD           N/A          PULLUP       NONE           NONE      
+  matrix_row_n[4]       INPUT        K12        LVCMOS33      PAD           N/A          PULLUP       NONE           NONE      
+  matrix_row_n[3]       INPUT        J12        LVCMOS33      PAD           N/A          PULLUP       NONE           NONE      
+  matrix_row_n[2]       INPUT        J13        LVCMOS33      PAD           N/A          PULLUP       NONE           NONE      
+  matrix_row_n[1]       INPUT        J16        LVCMOS33      PAD           N/A          PULLUP       NONE           NONE      
+  matrix_row_n[0]       INPUT        K16        LVCMOS33      PAD           N/A          PULLUP       NONE           NONE      
+      reset_n           INPUT         E3        LVCMOS33      PAD           N/A          PULLUP       NONE           NONE      
+      sys_clk           INPUT         R7        LVCMOS33      PAD           N/A          PULLUP       NONE           NONE      
+      uart_rx           INPUT        H14        LVCMOS33      PAD           N/A          PULLUP       IREG           NONE      
+     aud_dacdat        OUTPUT         P6        LVCMOS33      PAD            8            NONE        OREG           NONE      
+      aud_mclk         OUTPUT         N5        LVCMOS33      PAD            8            NONE        NONE           NONE      
+     flash_cs_n        OUTPUT        E15        LVCMOS33      PAD            8            NONE        OREG           NONE      
+     flash_mosi        OUTPUT        G14        LVCMOS33      PAD            8            NONE        OREG           NONE      
+     flash_sclk        OUTPUT        F14        LVCMOS33      PAD            8            NONE        OREG           NONE      
+      led_busy         OUTPUT        B15        LVCMOS33      PAD            8            NONE        NONE           NONE      
+     led_error         OUTPUT        C15        LVCMOS33      PAD            8            NONE        NONE           NONE      
+     led_mode2         OUTPUT        B16        LVCMOS33      PAD            8            NONE        OREG           NONE      
+     led_ready         OUTPUT        B14        LVCMOS33      PAD            8            NONE        OREG           NONE      
+      uart_tx          OUTPUT        H16        LVCMOS33      PAD            8            NONE        NONE           NONE      
+      aud_scl           INOUT        R12        LVCMOS33      PAD            8           PULLUP       TREG           NONE      
+      aud_sda           INOUT         R9        LVCMOS33      PAD            8           PULLUP     IREG;TREG        NONE      
+  matrix_column[7]      INOUT        M11        LVCMOS33      PAD            8           PULLUP       NONE           NONE      
+  matrix_column[6]      INOUT        L12        LVCMOS33      PAD            8           PULLUP       NONE           NONE      
+  matrix_column[5]      INOUT        P15        LVCMOS33      PAD            8           PULLUP       NONE           NONE      
+  matrix_column[4]      INOUT        P16        LVCMOS33      PAD            8           PULLUP       NONE           NONE      
+  matrix_column[3]      INOUT        N14        LVCMOS33      PAD            8           PULLUP       NONE           NONE      
+  matrix_column[2]      INOUT        N16        LVCMOS33      PAD            8           PULLUP       NONE           NONE      
+  matrix_column[1]      INOUT        M16        LVCMOS33      PAD            8           PULLUP       NONE           NONE      
+  matrix_column[0]      INOUT        L16        LVCMOS33      PAD            8           PULLUP       NONE           NONE      
+
+Report Clock Domain Luts:
+
+---------------------------------------------------------------------------------------------------------------
+  Index   |  Name      |  Frequency   |  LUT As Logic   |  LUT As Shifter   |  LUT As Dram   |  BRAM   |  DSP
+---------------------------------------------------------------------------------------------------------------
+  #1      |  aud_bclk  |  12MHz       |  217            |  0                |  0             |  0      |  0
+  #2      |  sys_clk   |  50MHz       |  2000           |  0                |  64            |  0      |  2
+---------------------------------------------------------------------------------------------------------------
+
+Clock Resource Statistics
+Index     ClockNet            Type               DriverType         Driver               Clk/Fanout
+#1        sys_clk_dup_1       Global             io                 sys_clk_syn_2.di     768/768
+#2        aud_bclk_dup_1      Global             io                 aud_bclk_syn_2.di    181/181
+#3        pll/feedback_raw    Global             pll                pll/pll.clkc0        1/1
+#4        aud_mclk_dup_1      Global             pll                pll/pll.clkc1        0/1
+
+Report Hierarchy Area:
++---------------------------------------------------------------------------------------------+
+|Instance        |Module                |le      |lut     |ripple  |seq     |bram    |dsp     |
++---------------------------------------------------------------------------------------------+
+|top             |braille_modes_top     |5027    |4213    |778     |1413    |0       |2       |
+|  bridge        |mode3_uart_bridge     |290     |290     |0       |97      |0       |0       |
+|  codec_cfg     |es8388_init           |216     |198     |18      |95      |0       |0       |
+|  controller    |mode12_controller     |2374    |1897    |475     |353     |0       |0       |
+|    m1          |mode1_key_lut         |26      |15      |11      |0       |0       |0       |
+|    qr          |mode2_question_rom    |4       |2       |2       |0       |0       |0       |
+|  flash_source  |flash_audio_source    |382     |369     |12      |148     |0       |0       |
+|    assembler   |pcm_byte_assembler    |27      |26      |0       |25      |0       |0       |
+|    descriptors |audio_descriptor_rom  |179     |179     |0       |9       |0       |0       |
+|    reader      |w25q64_stream_reader  |150     |138     |12      |90      |0       |0       |
+|  hello_tx      |uart_hello_tx         |41      |38      |3       |28      |0       |0       |
+|  image_rx      |braille_image_rx      |929     |739     |174     |335     |0       |1       |
+|    core        |braille_image_core    |578     |437     |135     |162     |0       |0       |
+|  player        |pcm_stream_i2s_player |104     |103     |0       |76      |0       |0       |
+|  pll           |audio_pll             |0       |0       |0       |0       |0       |0       |
+|  rx_diag       |uart_activity_diag    |12      |9       |3       |8       |0       |0       |
+|  scanner       |matrix8x8_scanner     |146     |139     |7       |40      |0       |0       |
+|  text_rx       |braille_text_rx       |307     |254     |50      |104     |0       |1       |
+|  uart          |recognition_uart      |135     |111     |24      |59      |0       |0       |
++---------------------------------------------------------------------------------------------+
+
+
+DataNet Average Fanout:
+
+   Index     Fanout     Nets  
+    #1          1       2905  
+    #2          2       1014  
+    #3          3       244   
+    #4          4       195   
+    #5        5-10      487   
+    #6        11-50     216   
+    #7       51-100      23   
+    #8       101-500     5    
+  Average     3.21            

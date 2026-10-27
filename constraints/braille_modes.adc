@@ -1,0 +1,43 @@
+set_pin_assignment {sys_clk} {LOCATION=R7;IOSTANDARD=LVCMOS33;}
+set_pin_assignment {reset_n} {LOCATION=E3;IOSTANDARD=LVCMOS33;}
+set_pin_assignment {uart_rx} {LOCATION=H14;IOSTANDARD=LVCMOS33;PULLTYPE=PULLUP;} # P4-47, idle high
+set_pin_assignment {uart_tx} {LOCATION=H16;IOSTANDARD=LVCMOS33;} # P4-45, verified core schematic page 1
+
+# External 8x8 keyboard header P: pin1=VCC, pin2..9=R1..R8,
+# pin10..17=C1..C8.  The P4 header numbers below were checked against the
+# EG4S20BG256 core-board schematic.  Existing W25Q128 pins P4-49/51/53/55
+# are deliberately not reused.
+set_pin_assignment {matrix_row_n[0]} {LOCATION=K16;IOSTANDARD=LVCMOS33;} # R1 -> P4-37
+set_pin_assignment {matrix_row_n[1]} {LOCATION=J16;IOSTANDARD=LVCMOS33;} # R2 -> P4-35
+set_pin_assignment {matrix_row_n[2]} {LOCATION=J13;IOSTANDARD=LVCMOS33;} # R3 -> P4-33
+set_pin_assignment {matrix_row_n[3]} {LOCATION=J12;IOSTANDARD=LVCMOS33;} # R4 -> P4-29
+set_pin_assignment {matrix_row_n[4]} {LOCATION=K12;IOSTANDARD=LVCMOS33;} # R5 -> P4-27
+set_pin_assignment {matrix_row_n[5]} {LOCATION=L13;IOSTANDARD=LVCMOS33;} # R6 -> P4-25
+set_pin_assignment {matrix_row_n[6]} {LOCATION=M14;IOSTANDARD=LVCMOS33;} # R7 -> P4-23
+set_pin_assignment {matrix_row_n[7]} {LOCATION=P14;IOSTANDARD=LVCMOS33;} # R8 -> P4-21
+
+set_pin_assignment {matrix_column[0]} {LOCATION=L16;IOSTANDARD=LVCMOS33;} # C1 -> P4-19
+set_pin_assignment {matrix_column[1]} {LOCATION=M16;IOSTANDARD=LVCMOS33;} # C2 -> P4-17
+set_pin_assignment {matrix_column[2]} {LOCATION=N16;IOSTANDARD=LVCMOS33;} # C3 -> P4-15
+set_pin_assignment {matrix_column[3]} {LOCATION=N14;IOSTANDARD=LVCMOS33;} # C4 -> P4-13
+set_pin_assignment {matrix_column[4]} {LOCATION=P16;IOSTANDARD=LVCMOS33;} # C5 -> P4-11
+set_pin_assignment {matrix_column[5]} {LOCATION=P15;IOSTANDARD=LVCMOS33;} # C6 -> P4-9
+set_pin_assignment {matrix_column[6]} {LOCATION=L12;IOSTANDARD=LVCMOS33;} # C7 -> P4-7
+set_pin_assignment {matrix_column[7]} {LOCATION=M11;IOSTANDARD=LVCMOS33;} # C8 -> P4-5
+
+set_pin_assignment {aud_bclk}   {LOCATION=M6;IOSTANDARD=LVCMOS33;}
+set_pin_assignment {aud_lrc}    {LOCATION=M7;IOSTANDARD=LVCMOS33;}
+set_pin_assignment {aud_mclk}   {LOCATION=N5;IOSTANDARD=LVCMOS33;}
+set_pin_assignment {aud_dacdat} {LOCATION=P6;IOSTANDARD=LVCMOS33;}
+set_pin_assignment {aud_scl}    {LOCATION=R12;IOSTANDARD=LVCMOS33;}
+set_pin_assignment {aud_sda}    {LOCATION=R9;IOSTANDARD=LVCMOS33;}
+
+set_pin_assignment {flash_cs_n} {LOCATION=E15;IOSTANDARD=LVCMOS33;}
+set_pin_assignment {flash_miso} {LOCATION=D14;IOSTANDARD=LVCMOS33;}
+set_pin_assignment {flash_sclk} {LOCATION=F14;IOSTANDARD=LVCMOS33;}
+set_pin_assignment {flash_mosi} {LOCATION=G14;IOSTANDARD=LVCMOS33;}
+
+set_pin_assignment {led_ready} {LOCATION=B14;IOSTANDARD=LVCMOS33;}
+set_pin_assignment {led_busy}  {LOCATION=B15;IOSTANDARD=LVCMOS33;}
+set_pin_assignment {led_mode2} {LOCATION=B16;IOSTANDARD=LVCMOS33;}
+set_pin_assignment {led_error} {LOCATION=C15;IOSTANDARD=LVCMOS33;}
